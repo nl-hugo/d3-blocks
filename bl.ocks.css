@@ -1,0 +1,60 @@
+
+.gist {
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+a.gist {
+  background-position: 50% 0%;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: inline-block;
+  height: 100px;
+  line-height: normal;
+  margin: 10px;
+  position: relative;
+  text-shadow: 1px 1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, -1px -1px 0 #fff;
+  transition: ease 750ms background-position;
+  -webkit-transition: ease 750ms background-position;
+  -moz-transition: ease 750ms background-position;
+  -ms-transition: ease 750ms background-position;
+  -o-transition: ease 750ms background-position;
+  width: 230px;
+}
+
+a.gist:hover,
+a.gist:focus {
+  background-color: #eee;
+  background-position: 50% 100%;
+  text-decoration: none;
+}
+
+a.gist .description,
+a.gist .date {
+  position: absolute;
+  padding: 10px;
+  z-index: 2;
+}
+
+a.gist .description {
+  top: 0;
+  color: #000;
+}
+
+a.gist .date {
+  display: none;
+}
+
+a.gist:hover .description {
+  text-decoration: underline;
+}
+
+.date {
+  color: #636363;
+  display: block;
+  font-size: smaller;
+}

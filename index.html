@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="bl.ocks.css" />
+  </head>
+  
+  <body>
+    <form name="myform" onSubmit="return handleClick();">
+      http://bl.ocks.org/ <input type="text" id="myUser" placeholder="your gist username">
+      <input name="Submit"  type="submit" value="Get bl.ocks" />
+    </form>
+
+    <div class="gists">
+      <br clear="both">
+      <a id="gist-link" target="_blank">More blocks</a>
+      <div class="loading">Loading; one moment please…</div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="bl.ocks.js"></script>
+  <script>
+
+    function handleClick(event){
+      var val = d3.select("#myUser")[0][0].value;
+      getBlocks(val);
+      return false;
+    }
+
+    function getBlocks(username) {
+      d3.selectAll(".gist").remove();
+      blocks(username, 4); 
+    }
+  </script>
+  
+</html> 
